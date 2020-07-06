@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textTries"
+        android:layout_width="113dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="52dp"
+        android:background="#006C0101"
+        android:text="0/0"
+        android:textAlignment="viewEnd"
+        android:textColor="#0017C5"
+        android:textSize="36sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.609"
+        app:layout_constraintStart_toEndOf="@+id/textQuestion"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textQuestion"
+        android:layout_width="125dp"
+        android:layout_height="67dp"
+        android:gravity="center"
+        android:text="TextView"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.15" />
+
+    <TextView
+        android:id="@+id/textTimer"
+        android:layout_width="113dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="52dp"
+        android:background="#006C0101"
+        android:text="30s"
+        android:textAlignment="viewStart"
+        android:textColor="#C50000"
+        android:textSize="36sp"
+        app:layout_constraintEnd_toStartOf="@+id/textQuestion"
+        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.gridlayout.widget.GridLayout
+        android:id="@+id/grid"
+        android:layout_width="308dp"
+        android:layout_height="304dp"
+        android:gravity="center_horizontal"
+        app:columnCount="2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:rowCount="2">
+
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="150sp"
+            android:layout_height="150sp"
+            android:backgroundTint="#A7FFEB"
+            android:onClick="clicked"
+            android:tag="1"
+            android:text="Button"
+            android:textSize="24sp"
+            app:layout_column="0"
+            app:layout_row="0" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="150sp"
+            android:layout_height="150sp"
+            android:backgroundTint="#EA80FC"
+            android:onClick="clicked"
+            android:tag="2"
+            android:text="Button"
+            android:textSize="24sp"
+            app:layout_column="1"
+            app:layout_row="0" />
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="150sp"
+            android:layout_height="150sp"
+            android:backgroundTint="#FFE57F"
+            android:onClick="clicked"
+            android:tag="3"
+            android:text="Button"
+            android:textSize="24sp"
+            app:layout_column="0"
+            app:layout_row="1" />
+
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="150sp"
+            android:layout_height="150sp"
+            android:backgroundTint="#FF8A80"
+            android:onClick="clicked"
+            android:tag="4"
+            android:text="Button"
+            android:textSize="24sp"
+            app:layout_column="1"
+            app:layout_row="1" />
+    </androidx.gridlayout.widget.GridLayout>
+
+    <Button
+        android:id="@+id/buttonRestart"
+        android:layout_width="157dp"
+        android:layout_height="52dp"
+        android:layout_marginBottom="28dp"
+        android:backgroundTint="#B9F6CA"
+        android:onClick="playAgain"
+        android:text="Play Again!!"
+        android:textColor="#FF5252"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/grid"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/textScore"
+        android:layout_width="307dp"
+        android:layout_height="47dp"
+        android:textAlignment="center"
+        android:textColor="#FFAB40"
+        android:textSize="30sp"
+        android:textStyle="italic"
+        android:typeface="normal"
+        app:layout_constraintBottom_toTopOf="@+id/buttonRestart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/grid"
+        app:layout_constraintVertical_bias="0.376" />
+
+    <Button
+        android:id="@+id/buttonStart"
+        android:layout_width="162dp"
+        android:layout_height="73dp"
+        android:backgroundTint="#B9F6CA"
+        android:drawableTint="#FFFFFF"
+        android:onClick="startGame"
+        android:text="GO!"
+        android:textColor="#FF80AB"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Salem says hi 4/11/2020"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.022" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
